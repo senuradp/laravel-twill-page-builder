@@ -8,6 +8,8 @@ use A17\Twill\Services\Listings\TableColumns;
 use A17\Twill\Services\Forms\Fields\Input;
 use A17\Twill\Services\Forms\Form;
 use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
+use A17\Twill\Services\Forms\Fields\Medias;
+
 
 class PageController extends BaseModuleController
 {
@@ -31,6 +33,10 @@ class PageController extends BaseModuleController
 
         $form->add(
             Input::make()->name('description')->label('Description')->translatable()
+        );
+
+        $form->add(
+            Medias::make()->name('cover')->label('Cover image')
         );
 
         return $form;
