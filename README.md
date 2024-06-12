@@ -47,6 +47,7 @@ Creating a custom block
 
 ```
 php artisan twill:make:block text
+php artisan twill:make:block image
 ```
 - Should we also generate a view file for rendering the block? yes
 
