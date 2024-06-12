@@ -43,6 +43,11 @@ Answer the prompts and then run
 php artisan migrate
 ```
 
-Configuring a Page Module
+Creating a custom block
+
+```
+php artisan twill:make:block text
+```
+- Should we also generate a view file for rendering the block? yes
 
 
