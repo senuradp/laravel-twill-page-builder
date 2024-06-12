@@ -21,7 +21,7 @@ connect database in .env file
 php artisan twill:install      
 ```
 
-Make Pages Module
+Creating a Page Module
 ```
 php artisan twill:make:module pages
 ```
@@ -42,3 +42,7 @@ Answer the prompts and then run
 ```
 php artisan migrate
 ```
+
+Configuring a Page Module
+
+

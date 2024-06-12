@@ -17,6 +17,8 @@ class PageController extends BaseModuleController
      */
     protected function setUpController(): void
     {
+        $this->setPermalinkBase('');
+        $this->withoutLanguageInPermalink();
     }
 
     /**
