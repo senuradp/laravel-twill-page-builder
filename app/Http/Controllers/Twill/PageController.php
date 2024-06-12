@@ -9,7 +9,7 @@ use A17\Twill\Services\Forms\Fields\Input;
 use A17\Twill\Services\Forms\Form;
 use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
 use A17\Twill\Services\Forms\Fields\Medias;
-
+use A17\Twill\Services\Forms\Fields\BlockEditor;
 
 class PageController extends BaseModuleController
 {
@@ -37,6 +37,10 @@ class PageController extends BaseModuleController
 
         $form->add(
             Medias::make()->name('cover')->label('Cover image')
+        );
+
+        $form->add(
+            BlockEditor::make()
         );
 
         return $form;
