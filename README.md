@@ -108,3 +108,11 @@ Add these to resources/css/app.css
 @tailwind utilities;
 ```
 
+Add the @vite code lines to the views from the documentation
+
+Make controller
+```
+php artisan make:controller PageDisplayController
+```
+
+
