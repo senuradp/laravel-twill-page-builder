@@ -115,4 +115,15 @@ Make controller
 php artisan make:controller PageDisplayController
 ```
 
+Nav
+
+- Gen module
+```
+php artisan twill:make:module MenuLinks --hasNesting --hasPosition --hasTranslation
+```
+
+Rendering menu
+```
+php artisan make:component Menu
+```
 
