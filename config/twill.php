@@ -31,25 +31,25 @@ return [
 
     // Glide configuration
     'glide' => [
-        'source' => storage_path('app/public/uploads'), // Source path for images
-        'use_source_disk' => false, // Not using a source disk directly
-        'source_disk' => 'public', // Specify the disk to use, aligning with your filesystem configuration
-        'cache' => storage_path('app'), // Path for cache storage
-        'use_cache_disk' => false, // Not using a cache disk directly
-        'cache_disk' => 'public', // Specify the disk for caching
-        'base_url' => env('APP_URL'), // Base URL for generating image URLs
-        'base_path' => 'storage', // Update this to 'storage' to fix the incorrect '/img/' prefix
-        'use_signed_urls' => false, // Set to false unless you need signed URLs for security
-        'sign_key' => null, // Sign key for securing URLs, set to null if not used
-        'driver' => 'gd', // Image processing driver, typically 'gd' or 'imagick'
+        'source' => storage_path('app/public/uploads'),
+        'use_source_disk' => false,
+        'source_disk' => 'public',
+        'cache' => storage_path('app'),
+        'use_cache_disk' => false,
+        'cache_disk' => 'public',
+        'base_url' => env('APP_URL'),
+        'base_path' => 'storage',
+        'use_signed_urls' => false,
+        'sign_key' => null,
+        'driver' => 'gd',
         'default_params' => [
-            'fm' => 'jpg', // Default format for images
-            'q' => '80', // Default quality setting
-            'fit' => 'max', // Default fit setting
+            'fm' => 'jpg',
+            'q' => '80',
+            'fit' => 'max',
         ],
         'cms_default_params' => [
-            'q' => '60', // Default quality for CMS images
-            'dpr' => '1', // Default device pixel ratio
+            'q' => '60',
+            'dpr' => '1',
         ],
     ],
 ];

@@ -51,4 +51,60 @@ php artisan twill:make:block image
 ```
 - Should we also generate a view file for rendering the block? yes
 
+Add the Glide  configuration in config/twill.php
+
+```
+// Glide configuration
+    'glide' => [
+        'source' => storage_path('app/public/uploads'), // Source path for images
+        'use_source_disk' => false, // Not using a source disk directly
+        'source_disk' => 'public', // Specify the disk to use, aligning with your filesystem configuration
+        'cache' => storage_path('app'), // Path for cache storage
+        'use_cache_disk' => false, // Not using a cache disk directly
+        'cache_disk' => 'public', // Specify the disk for caching
+        'base_url' => env('APP_URL'), // Base URL for generating image URLs
+        'base_path' => 'storage', // Update this to 'storage' to fix the incorrect '/img/' prefix
+        'use_signed_urls' => false, // Set to false unless you need signed URLs for security
+        'sign_key' => null, // Sign key for securing URLs, set to null if not used
+        'driver' => 'gd', // Image processing driver, typically 'gd' or 'imagick'
+        'default_params' => [
+            'fm' => 'jpg', // Default format for images
+            'q' => '80', // Default quality setting
+            'fit' => 'max', // Default fit setting
+        ],
+        'cms_default_params' => [
+            'q' => '60', // Default quality for CMS images
+            'dpr' => '1', // Default device pixel ratio
+        ],
+    ],
+```
+
+Install tailwind css
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+Add this to tailwind.config.js
+```
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+Add these to resources/css/app.css
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
