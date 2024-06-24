@@ -32,5 +32,9 @@ class AppServiceProvider extends ServiceProvider
         TwillAppSettings::registerSettingsGroup(
             SettingsGroup::make()->name('homepage')->label('Homepage')
         );
+        TwillNavigation::addLink(
+            NavigationLink::make()->forModule('projects')
+        );
+
     }
 }
