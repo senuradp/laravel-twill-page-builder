@@ -28,6 +28,13 @@ connect database in .env file
 php artisan twill:install      
 ```
 
+To setup : Run
+```
+composer install
+npm install
+php artisan serve
+```
+
 Creating a Page Module
 ```
 php artisan twill:make:module pages
