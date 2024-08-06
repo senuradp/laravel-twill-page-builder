@@ -29,6 +29,14 @@ return [
         ],
     ],
 
+    'repeaters' => [
+        'tasks' => [
+            'title' => 'Tasks',
+            'trigger' => 'Add Task',
+            'component' => 'a17-block-task'
+        ]
+    ],
+
     // Glide configuration
     'glide' => [
         'source' => storage_path('app/public/uploads'),

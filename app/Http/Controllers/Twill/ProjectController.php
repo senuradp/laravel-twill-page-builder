@@ -6,9 +6,9 @@ use A17\Twill\Models\Contracts\TwillModelContract;
 use A17\Twill\Services\Listings\Columns\Text;
 use A17\Twill\Services\Listings\TableColumns;
 use A17\Twill\Services\Forms\Fields\Input;
+use A17\Twill\Services\Forms\Fields\Repeater;
 use A17\Twill\Services\Forms\Form;
 use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
-
 class ProjectController extends BaseModuleController
 {
     protected $moduleName = 'projects';
@@ -32,8 +32,16 @@ class ProjectController extends BaseModuleController
             Input::make()->name('description')->label('Description')
         );
 
+        $form->add(
+            Repeater::make()->type('tasks')
+        );
+
+        \Log::info('Form configuration:', ['form' => $form->toArray()]);
+
         return $form;
     }
+
+
 
     /**
      * This is an example and can be removed if no modifications are needed to the table.
@@ -45,6 +53,9 @@ class ProjectController extends BaseModuleController
         $table->add(
             Text::make()->field('description')->title('Description')
         );
+
+        // add repeater
+
 
         return $table;
     }
