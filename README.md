@@ -35,6 +35,50 @@ npm install
 php artisan serve
 ```
 
+Create a user
+```
+use twillpagebuilder;
+
+INSERT INTO twill_users (
+    id,
+    deleted_at,
+    created_at,
+    updated_at,
+    published,
+    name,
+    email,
+    password,
+    role,
+    title,
+    description,
+    remember_token,
+    language,
+    last_login_at,
+    registered_at,
+    require_new_password
+) VALUES (
+    1,
+    NULL,
+    '2024-08-09 04:43:00',
+    '2024-08-09 04:43:00',
+    1,
+    'Admin',
+    'senuradp@gmail.com',
+    '$2y$12$jtyKr2atQdxkdxioWAQniOOZt45FImOS1J/ULLzvkh4bGq44FSBWq',
+    'SUPERADMIN',
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    '2024-08-09 04:43:00',
+    0
+);
+
+
+SELECT * FROM twillpagebuilder.twill_users;
+```
+
 Creating a Page Module
 ```
 php artisan twill:make:module pages
